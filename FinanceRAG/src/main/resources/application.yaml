@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: FinanceRAG
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  ai:
+    openai:
+      api-key: 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
+      chat:
+        options:
+          model:gpt-oss-120b
+  vectorstore:
+    pgvector:
+    index-type: HNSW
+    distance-type: COSINE_DISTANCE
+    dimensions: 1536
+    max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+
+
+
